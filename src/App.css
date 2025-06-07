@@ -1,5 +1,5 @@
-body {
-    background-image: url(assets/bgi.jpg);
+/* body {
+    background-image: url(assets/tom.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -9,6 +9,20 @@ body {
     justify-content: center;
     min-height: 100vh;
     align-items: center;
+} */
+ 
+body {
+    background-image: url(assets/tom.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+    background-color: white; /* fallback color */
 }
 
 .clock-container {
@@ -20,8 +34,15 @@ body {
     align-items: center;
 }
 
+.title {
+    color: rgb(17, 23, 28);
+    font-size: 3rem;
+    font-weight: 700;
+    margin-top: -115px;
+}
+
 .clock {
-    color: white;
+    color: rgb(156, 8, 8);
     font-size: 6rem;
     font-weight: bold;
     font-family: monospace;
