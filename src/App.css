@@ -64,6 +64,9 @@ body {
     transition: all 0.3s;
 }
 
+.chatbot-toggle button{
+    color: gold;
+}
 /* Responsive: On small screens, make the date circular */
 @media (max-width: 600px) {
     .clock {

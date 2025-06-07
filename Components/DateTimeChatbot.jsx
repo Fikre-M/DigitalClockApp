@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FaRegMessage } from "react-icons/fa6";
 
 function getBotResponse(message) {
     const now = new Date();
@@ -35,33 +36,34 @@ function getBotResponse(message) {
     };
 
     return (
-        <div>
+      <div>
         <button
-            className="chatbot-toggle"
-            onClick={() => setOpen(!open)}
-            aria-label="Open chatbot"
+          className="chatbot-toggle"
+          onClick={() => setOpen(!open)}
+          aria-label="Open chatbot"
         >
-            💬
+          <FaRegMessage />
+          {/* 💬 */}
         </button>
         {open && (
-            <div className="chatbot-container">
+          <div className="chatbot-container">
             <div className="chatbot-messages">
-                {messages.map((msg, idx) => (
+              {messages.map((msg, idx) => (
                 <div key={idx} className={`chatbot-message ${msg.sender}`}>
-                    {msg.text}
+                  {msg.text}
                 </div>
-                ))}
+              ))}
             </div>
             <div className="chatbot-input-row">
-                <input
+              <input
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 onKeyDown={(e) => e.key === "Enter" && handleSend()}
                 placeholder="Ask about date, time, day, year..."
-                />
-                <button onClick={handleSend}>Send</button>
+              />
+              <button onClick={handleSend}>Send</button>
             </div>
-            </div>
+          </div>
         )}
         <style>{`
                 .chatbot-toggle {
@@ -148,8 +150,8 @@ function getBotResponse(message) {
                     }
                 }
             `}</style>
-    </div>
-  );
+      </div>
+    );
 }
 
 export default DateTimeChatbot;
