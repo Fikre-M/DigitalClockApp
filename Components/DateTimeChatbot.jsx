@@ -36,34 +36,34 @@ function getBotResponse(message) {
     };
 
     return (
-      <div>
-        <button
-          className="chatbot-toggle"
-          onClick={() => setOpen(!open)}
-          aria-label="Open chatbot"
-        >
-          <FaRegMessage />
-          {/* 💬 */}
-        </button>
-        {open && (
-          <div className="chatbot-container">
-            <div className="chatbot-messages">
-              {messages.map((msg, idx) => (
-                <div key={idx} className={`chatbot-message ${msg.sender}`}>
-                  {msg.text}
+        <div>
+            <button
+            className="chatbot-toggle"
+            onClick={() => setOpen(!open)}
+            aria-label="Open chatbot"
+            >
+            <FaRegMessage />
+            {/* 💬 */}
+            </button>
+            {open && (
+            <div className="chatbot-container">
+                <div className="chatbot-messages">
+                {messages.map((msg, idx) => (
+                    <div key={idx} className={`chatbot-message ${msg.sender}`}>
+                    {msg.text}
+                    </div>
+                ))}
                 </div>
-              ))}
+                <div className="chatbot-input-row">
+                <input
+                    value={input}
+                    onChange={(e) => setInput(e.target.value)}
+                    onKeyDown={(e) => e.key === "Enter" && handleSend()}
+                    placeholder="Ask about date, time, day, year..."
+                />
+                <button onClick={handleSend}>Send</button>
+                </div>
             </div>
-            <div className="chatbot-input-row">
-              <input
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-                onKeyDown={(e) => e.key === "Enter" && handleSend()}
-                placeholder="Ask about date, time, day, year..."
-              />
-              <button onClick={handleSend}>Send</button>
-            </div>
-          </div>
         )}
         <style>{`
                 .chatbot-toggle {
@@ -150,7 +150,7 @@ function getBotResponse(message) {
                     }
                 }
             `}</style>
-      </div>
+        </div>
     );
 }
 
