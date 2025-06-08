@@ -52,7 +52,9 @@ body {
 
 /* Date styling for large screens */
 .date {
-    color: white;
+    color: rgb(156, 8, 8);
+    /* color: white; */
+    font-weight: 900;
     font-size: 2rem;
     font-family: monospace;
     margin-top: 1rem;
@@ -82,7 +84,8 @@ body {
         border-radius: 50%;
         margin-top: 1rem;
         padding: 0;
-        background: rgba(0,0,0,0.4);
+        color: aliceblue;
+        /* background: rgba(0,0,0,0.4); */
         box-shadow: 2px 2px 8px hsla(0,0%,0%,0.4);
         text-align: center;
         word-break: break-word;
