@@ -36,42 +36,42 @@ function getBotResponse(message) {
     };
 
     return (
-        <div>
-            <button
-            className="chatbot-toggle"
-            onClick={() => setOpen(!open)}
-            aria-label="Open chatbot"
-            >
-            <FaRegMessage />
-            {/* 💬 */}
-            </button>
-            {open && (
-            <div className="chatbot-container">
-                <div className="chatbot-messages">
-                {messages.map((msg, idx) => (
-                    <div key={idx} className={`chatbot-message ${msg.sender}`}>
-                    {msg.text}
-                    </div>
-                ))}
+      <div>
+        <button
+          className="chatbot-toggle"
+          onClick={() => setOpen(!open)}
+          aria-label="Open chatbot"
+        >
+          <FaRegMessage />
+        </button>
+        {open && (
+          <div className="chatbot-container">
+            <div className="chatbot-messages">
+              {messages.map((msg, idx) => (
+                <div key={idx} className={`chatbot-message ${msg.sender}`}>
+                  {msg.text}
                 </div>
-                <div className="chatbot-input-row">
-                <input
-                    value={input}
-                    onChange={(e) => setInput(e.target.value)}
-                    onKeyDown={(e) => e.key === "Enter" && handleSend()}
-                    placeholder="Ask about date, time, day, year..."
-                />
-                <button onClick={handleSend}>Send</button>
-                </div>
+              ))}
             </div>
+            <div className="chatbot-input-row">
+              <input
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+                onKeyDown={(e) => e.key === "Enter" && handleSend()}
+                placeholder="Ask about date, time, day, year..."
+              />
+              <button onClick={handleSend}>Send</button>
+            </div>
+          </div>
         )}
+
         <style>{`
                 .chatbot-toggle {
                     position: fixed;
                     bottom: 24px;
                     right: 24px;
                     z-index: 1000;
-                    background: #007bff;
+                    background:  rgb(156, 8, 8);
                     color: #fff;
                     border: none;
                     border-radius: 50%;
@@ -131,7 +131,7 @@ function getBotResponse(message) {
                     margin-right: 8px;
                 }
                 .chatbot-input-row button {
-                    background: #007bff;
+                    background: rgb(156, 8, 8);
                     color: #fff;
                     border: none;
                     border-radius: 4px;
@@ -150,7 +150,7 @@ function getBotResponse(message) {
                     }
                 }
             `}</style>
-        </div>
+      </div>
     );
 }
 
