@@ -64,8 +64,6 @@ function getBotResponse(message) {
             </div>
           </div>
         )}
-
-        
       </div>
     );
 }

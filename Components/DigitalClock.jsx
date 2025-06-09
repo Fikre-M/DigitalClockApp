@@ -60,7 +60,6 @@ function DigitalClock() {
 
     return (
         <div className="clock-container">
-            {/* <h1 className="title">Digital Clock App</h1> */}
         <div className="clock">
             <span>{formatTime()}</span>
         </div>
