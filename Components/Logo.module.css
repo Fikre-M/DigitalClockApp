@@ -2,19 +2,19 @@
 .logo {
     width: 100%;
     height: auto;
-  }
-  
-  .logo polygon,
-  .logo line,
-  .logo rect,
-  .logo polyline {
+}
+
+.logo polygon,
+.logo line,
+.logo rect,
+.logo polyline {
     fill: none;
     stroke: black;
     stroke-width: 3;
-  }
-  
+}
+
   /* add styling to the bar */
-  .logo rect {
+.logo rect {
     fill: black;
-  }
-  
+}
+
