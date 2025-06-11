@@ -5,7 +5,7 @@ const Logo = () => {
     return (
         <div className={styles.logoContainer}>
         <svg
-            viewBox="0 0 500 120"
+            viewBox="0 0 3000 120"
             className={styles.logoSvg}
             xmlns="http://www.w3.org/2000/svg"
         >
