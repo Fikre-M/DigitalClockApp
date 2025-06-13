@@ -1,8 +1,9 @@
-import { useState } from 'react'
+// import { useState } from 'react'
 import './App.css'
 import DigitalClock from '../Components/DigitalClock'
 import DateTimeChatbot from '../Components/DateTimeChatbot';
-import Logo from '../Components/Logo';
+// import Logo from '../Components/Logo';
+import ClockAI from '../Components/ClockAI';
 
 function App() {
 
@@ -10,10 +11,8 @@ function App() {
     <>
       <DigitalClock />
       <DateTimeChatbot />
-      <br />
-      <br />
-    
-      <Logo />
+      <ClockAI />
+      {/* <Logo /> */}
     </>
   );
 }
