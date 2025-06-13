@@ -1,0 +1,161 @@
+body {
+    background-image: url(assets/tom.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+    background-color: rgb(159, 102, 102); 
+}
+
+.clock-container {
+    backdrop-filter: blur(px);
+    width: 100vw;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.clock {
+    color: rgb(156, 8, 8);
+    font-size: 5.5rem;
+    font-weight: bold;
+    font-family: monospace;
+    text-align: center;
+    text-shadow: 3px 3px 5px hsla(0, 0%, 0%, 0.75);
+}
+
+/* Date styling for large screens */
+.date {
+    color: rgb(156, 8, 8);
+    /* color: white; */
+    font-weight: 900;
+    font-size: 2rem;
+    font-family: monospace;
+    margin-top: 1rem;
+    padding: 0.5em 1.5em;
+    background: rgba(0,0,0,0.2);
+    border-radius: 1em;
+    text-align: center;
+    box-shadow: 2px 2px 8px hsla(0,0%,0%,0.3);
+    transition: all 0.3s;
+}
+
+.chatbot-toggle button{
+    color: gold;
+}
+/* Responsive: On small screens, make the date circular */
+@media (max-width: 600px) {
+    .clock {
+        font-size: 2.5rem;
+    }
+    .date {
+        font-size: 1rem;
+        width: 120px;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        margin-top: 1rem;
+        padding: 0;
+        color: aliceblue;
+        /* background: rgba(0,0,0,0.4); */
+        box-shadow: 2px 2px 8px hsla(0,0%,0%,0.4);
+        text-align: center;
+        word-break: break-word;
+    }
+}
+
+
+/* DateTimeChatbot Section */
+
+.chatbot-toggle {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 1000;
+    background:  rgb(156, 8, 8);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+.chatbot-container {
+    position: fixed;
+    bottom: 90px;
+    right: 24px;
+    width: 320px;
+    max-width: 90vw;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.chatbot-messages {
+    flex: 1;
+    padding: 16px;
+    overflow-y: auto;
+    max-height: 300px;
+}
+.chatbot-message {
+    margin-bottom: 8px;
+    padding: 8px 12px;
+    border-radius: 16px;
+    max-width: 80%;
+    word-break: break-word;
+}
+.chatbot-message.bot {
+    background: #f1f1f1;
+    align-self: flex-start;
+}
+.chatbot-message.user {
+    background: #007bff;
+    color: #fff;
+    align-self: flex-end;
+}
+.chatbot-input-row {
+    display: flex;
+    border-top: 1px solid #eee;
+    padding: 8px;
+    background: #fafafa;
+}
+.chatbot-input-row input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 8px;
+}
+.chatbot-input-row button {
+    background: rgb(156, 8, 8);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+@media (max-width: 600px) {
+    .chatbot-container {
+        width: 98vw;
+        right: 1vw;
+        bottom: 70px;
+    }
+    .chatbot-toggle {
+        right: 1vw;
+        bottom: 16px;
+    }
+}
